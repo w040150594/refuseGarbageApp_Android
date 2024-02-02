@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/search_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#64E269"/>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+
+        <EditText
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint=" 🔍 请输入搜索内容"
+                android:paddingLeft="20dp"
+                android:paddingRight="50dp"
+                android:background="@drawable/searchview_circle"/>
+
+        <ImageButton
+                android:id="@+id/search_camera_button"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/ic_camera"
+                android:scaleType="centerInside"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_gravity="end|center_vertical"/>
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"/>
+
+</LinearLayout>

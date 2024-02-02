@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/test_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#64E269"/>
+
+    <TextView
+            android:id="@+id/score"
+            android:layout_width="match_parent"
+            android:textSize="50sp"
+            android:text="10"
+            android:textColor="#FF0000"
+            android:layout_margin="10dp" android:layout_height="wrap_content"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="题目"
+                android:textStyle="bold"
+                android:background="#86DF77"
+                android:gravity="center"
+                android:textSize="16sp"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="我的答案"
+                android:textStyle="bold"
+                android:background="#86DF77"
+                android:gravity="center"
+                android:textSize="16sp"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="正确答案"
+                android:textStyle="bold"
+                android:background="#86DF77"
+                android:gravity="center"
+                android:textSize="16sp"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/answer_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:padding="10dp"
+    />
+
+</LinearLayout>
